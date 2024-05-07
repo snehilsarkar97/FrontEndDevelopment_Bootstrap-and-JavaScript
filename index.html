@@ -12,13 +12,15 @@
 
     <!-- Bootstrap css classess -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
     <!-- Google Fonts: https://fonts.google.com/specimen/Barlow+Condensed?query=Barlow+Condensed -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css">
-    
+    <!-- jQuery and Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
     <!-- Customized styles -->
     <style>
         /* MiOra's website reference font */
@@ -51,6 +53,38 @@
         .bg-miora-light-blue {
             background-color: #DDEDFF;
         }
+
+        .cards-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.card img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.card {
+  margin: 0 0.5em;
+  box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+  border: none;
+  border-radius: 0;
+}
+.carousel-inner {
+  padding: 1em;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: #e1e1e1;
+  width: 5vh;
+  height: 5vh;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+@media (min-width: 768px) {
+  .card img {
+    height: 11em;
+  }
+}
     </style>
 </head>
 <body>
@@ -188,110 +222,104 @@
                 </div>
             </div>
         </section>     
-        <section>   
+        
+        <section class="container">   
         <h5>Why Join MiOra and Engage in our Health Projects?</h5>
-        <div class="container-fluid mt-5 d-none d-lg-block">
-            <div class="row">
-              <div class="col-12">
-                <h3 class="text-left heading">Businesses using Power Apps</h3>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-1">  <button id="scrollLeftButton" class="scroll-button">&lt;</button>
-              </div>
-              <div class="col-10">  <div class="d-flex overflow-auto" id="logoContainer">
-                  <img src="assets/uniqueOpp.svg" alt="accenture" class="logo">
-                  <img src="assets/network.svg" alt="Zurich" class="logo">
-                  <img src="assets/healthprojects.svg" alt="usbank" class="logo">
-                  <img src="assets/careerplanning.svg" alt="coca-cola" class="logo">
+
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <!-- First Carousel Item -->
+              <div class="carousel-item active">
+                <div class="cards-wrapper">
+                  <div class="card">
+                    <img src="assets/car1.jpg" class="card-img-top" alt="Unique Opportunities for Cutting-Edge Research">
+                    <div class="card-body">
+                      <h5 class="card-title">Unique Opportunities for Cutting-Edge Research</h5>
+                      <p class="card-text">
+                        At MiOra, we're dedicated to providing students with unparalleled opportunities to conduct cutting-edge health and STEM research. Earn certificates & contribute to real-world change. Join our no-barrier internship program!
+                      </p>
+                    </div>
+                  </div>
+                  <div class="card d-none d-md-block">
+                    <img src="assets/car2.jpg" class="card-img-top" alt="Professional Network and Educational Resources">
+                    <div class="card-body">
+                      <h5 class="card-title">Professional Network and Educational Resources</h5>
+                      <p class="card-text">
+                        Our projects provide hands-on experience & help you build a powerful network and fuel your passion with in-depth resources. Thrive in a supportive environment that builds confidence.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="card d-none d-md-block">
+                    <img src="assets/car3.png" class="card-img-top" alt="Diverse Projects Covering Critical Health Topics">
+                    <div class="card-body">
+                      <h5 class="card-title">Diverse Projects Covering Critical Health Topics</h5>
+                      <p class="card-text">
+                        Our interns work on projects like cancer awareness, men's & women's health, vaccine outreach, and research on endometrial, ovarian, pancreatic, and multiple myeloma cancers. Gain diverse experience & make a lasting impact.
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="col-1">  <button id="scrollRightButton" class="scroll-button">&gt;</button>
+          
+              <!-- Second Carousel Item -->
+              <div class="carousel-item">
+                <div class="cards-wrapper">
+                  <div class="card">
+                    <img src="assets/car4.jpg" class="card-img-top" alt="Strategic Career Planning">
+                    <div class="card-body">
+                      <h5 class="card-title">Strategic Career Planning</h5>
+                      <p class="card-text">
+                        More than an internship, it's a career launchpad! Launch your healthcare career with MiOra. Gain advanced experience in healthcare & strengthen your resume for college, medical/pharmacy school, or grad studies.
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
+          
+            <!-- Carousel Controls -->
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </a>
           </div>
-    </section>
+        </section>
 </div>
     <footer>
         <figure>
             <img src="./assets/footer.svg" alt="MiOra footer" class="img-fluid">
         </figure>
     </footer>
-
-
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-          const logoContainer = document.getElementById("logoContainer");
-          const images = logoContainer.querySelectorAll('.logo');
-          const buttonLeft = document.getElementById('scrollLeftButton');
-          const buttonRight = document.getElementById('scrollRightButton');
-      
-          let currentSlide = 0;
-          let maxImagesPerSlide = calculateMaxImagesPerSlide(); // New function
-      
-          function calculateMaxImagesPerSlide() {
-            const containerWidth = logoContainer.clientWidth; // Get container width
-            const imageWidth = images[0].clientWidth; // Assuming all images have similar width
-            return Math.floor(containerWidth / imageWidth); // Calculate max images per slide
-          }
-      
-          function showImages(startIndex) {
-            for (let i = 0; i < images.length; i++) {
-              images[i].style.display = 'none';
-            }
-            for (let i = startIndex; i < startIndex + maxImagesPerSlide && i < images.length; i++) {
-              images[i].style.display = 'block';
-            }
-          }
-      
-          showImages(currentSlide); // Initially show images based on screen size
-      
-          // Modified scrolling events
-          buttonLeft.addEventListener('click', function() {
-            if (currentSlide > 0) {
-              currentSlide--;
-              showImages(currentSlide);
-            } else {
-              logoContainer.scrollLeft -= 100; // Scroll to the left if already at the beginning
-            }
-          });
-      
-          buttonRight.addEventListener('click', function() {
-            if (currentSlide < images.length - maxImagesPerSlide) {
-              currentSlide++;
-              showImages(currentSlide);
-            } else {
-              logoContainer.scrollLeft += 100; // Scroll to the right if already at the end
-            }
-          });
-      
-          window.addEventListener('resize', function() { // Handle window resize
-            maxImagesPerSlide = calculateMaxImagesPerSlide();
-            showImages(currentSlide); // Recalculate and show images based on new screen size
-          });
+        window.addEventListener(‘DOMContentLoaded’, (event) => {
+        let multipleCardCarousel = document.querySelector(“#carouselExampleCaptions”);
+        if (window.matchMedia(“(min-width: 768px)”).matches) {
+        let carousel = new bootstrap.Carousel(multipleCardCarousel, { interval: false, wrap: false,});
+        let carouselWidth = document.querySelector(“.carousel-inner”).scrollWidth;
+        let cardWidth = document.querySelector(“.carousel-item”).offsetWidth;
+        let scrollPosition = 0;
+        
+        document.querySelector(“#carouselExampleCaptions .carousel-control-next”).addEventListener(“click”, function() {
+        if (scrollPosition < carouselWidth – cardWidth * 4) {
+        scrollPosition += cardWidth;
+        document.querySelector(“#carouselExampleCaptions .carousel-inner”).scroll({ left: scrollPosition, behavior: ‘smooth’ });
+        }
         });
-      </script>  
-
-    <!-- <h1 class="text-center mt-3 my-3">MiOra</h1>
-    <h2 class="text-center mb-5">Healthcare Projects</h1>
-
-    <section class="container">
-        <h3>Color Schemes:</h3>
-
-        <p class="text-miora">Regular text</p>
-
-        <p class="text-black">Black text</p>
-
-        <p class="text-miora-yellow">Yellow text</p>
-
-        <p class="text-miora-blue">Blue text</p>        
-
-        <p class="text-white bg-miora-dark-blue">Dark blue background and white text</p>
-
-        <p class="text-black bg-miora-light-blue">Light blue background and black text</p>
-
-        <p class="text-miora-dark bg-miora-light-blue">Light blue background and grey text</p>
-    </section> -->
-    
+        
+        document.querySelector(“#carouselExampleCaptions .carousel-control-prev”).addEventListener(“click”, function() {
+        if (scrollPosition > 0) {
+        scrollPosition -= cardWidth;
+        document.querySelector(“#carouselExampleCaptions .carousel-inner”).scroll({ left: scrollPosition, behavior: ‘smooth’ });
+        }
+        });
+        } else {
+        multipleCardCarousel.classList.add(“slide”);
+        }
+        });
+        </script>                  
 </body>
 </html>
