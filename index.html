@@ -228,9 +228,9 @@
 
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
-              <!-- First Carousel Item -->
+              <!-- First Carousel Item with two cards -->
               <div class="carousel-item active">
-                <div class="cards-wrapper">
+                <div class="cards-wrapper d-flex justify-content-center">
                   <div class="card">
                     <img src="assets/car1.jpg" class="card-img-top" alt="Unique Opportunities for Cutting-Edge Research">
                     <div class="card-body">
@@ -240,7 +240,7 @@
                       </p>
                     </div>
                   </div>
-                  <div class="card d-none d-md-block">
+                  <div class="card">
                     <img src="assets/car2.jpg" class="card-img-top" alt="Professional Network and Educational Resources">
                     <div class="card-body">
                       <h5 class="card-title">Professional Network and Educational Resources</h5>
@@ -249,7 +249,13 @@
                       </p>
                     </div>
                   </div>
-                  <div class="card d-none d-md-block">
+                </div>
+              </div>
+          
+              <!-- Second Carousel Item with two cards -->
+              <div class="carousel-item">
+                <div class="cards-wrapper d-flex justify-content-center">
+                  <div class="card">
                     <img src="assets/car3.png" class="card-img-top" alt="Diverse Projects Covering Critical Health Topics">
                     <div class="card-body">
                       <h5 class="card-title">Diverse Projects Covering Critical Health Topics</h5>
@@ -258,12 +264,6 @@
                       </p>
                     </div>
                   </div>
-                </div>
-              </div>
-          
-              <!-- Second Carousel Item -->
-              <div class="carousel-item">
-                <div class="cards-wrapper">
                   <div class="card">
                     <img src="assets/car4.jpg" class="card-img-top" alt="Strategic Career Planning">
                     <div class="card-body">
@@ -276,6 +276,18 @@
                 </div>
               </div>
             </div>
+          
+            <!-- Carousel controls for navigation -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          
           
             <!-- Carousel Controls -->
             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
