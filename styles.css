@@ -9,10 +9,10 @@
     font-size: 1.1em;
 }
 
-.project-text p:first-of-type {
+/* .project-text p:first-of-type {
     color: #5B7D9A;
     font-weight: bold;
-}
+} */
 
 header{
     height: 50vh;
