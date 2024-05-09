@@ -89,3 +89,15 @@ header{
     transform: rotateY(180deg);
   }
   
+
+  @media screen and (max-width: 768px){
+    .card-title{
+        font-size: 0.9em;
+    }
+    .card-text{
+        font-size: 0.8em;
+    }
+    .cards-wrapper div:nth-of-type(2){
+        display: none;
+  }
+}
