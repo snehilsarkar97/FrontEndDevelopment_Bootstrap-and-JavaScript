@@ -1,3 +1,34 @@
+/* MiOra's website reference font */
+body {
+    font-family: "Barlow Condensed", sans-serif;
+}
+
+/* MiOra Brand Colors */
+
+.text-miora {
+    color: #5B7D9A;
+}
+
+.text-miora-dark {
+    color: #5C7D9F;
+}
+
+.text-miora-yellow {
+    color: #FFCB00;
+}
+
+.text-miora-blue {
+    color: #0580C3;
+}
+
+.bg-miora-dark-blue {
+    background-color: #0580C3;
+}
+
+.bg-miora-light-blue {
+    background-color: #DDEDFF;
+}
+
 .container{
     max-width: 1200px ;
     margin: 0 auto;
